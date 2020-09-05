@@ -1,0 +1,6 @@
+<h1><%= @document.title %></h1>
+<div class="document-show">
+  <%= @document.body %>
+</div>
+<p><%= link_to '編集', edit_document_path(@document) %></p>
+<p><%= link_to '削除', @document, data: { confirm: '削除してよろしいですか？' }, method: :delete %></p>

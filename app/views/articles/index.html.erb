@@ -1,0 +1,13 @@
+<h1>記事一覧</h1>
+
+<% @articles.each do |article| %>
+  <div class="article">
+    <p><%= link_to article.title, article_path(article) %></p>
+    <p><%= article.body %></p>
+  </div>
+<% end %>
+
+<h1>カテゴリーを選択</h1>
+<% @categories.each do |category| %>
+  <p><%= link_to category.name, category_path(category) %></p>
+<% end %>

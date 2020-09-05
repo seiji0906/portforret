@@ -1,0 +1,11 @@
+<h1>資料一覧</h1>
+
+
+<% @documents.each do |document| %>
+  <p><%= link_to document.title, document_path(document) %></p>
+<% end %>
+
+<h1>カテゴリーを選択</h1>
+<% @categories.each do |category| %>
+  <p><%= link_to category.name, category_path(category) %></p>
+<% end %>

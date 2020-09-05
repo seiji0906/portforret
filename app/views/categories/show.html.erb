@@ -1,0 +1,17 @@
+<h1><%= @category.name %></h1>
+
+<% if @path == "documents" %>
+<!--資料を表示-->
+  <% @documents.each do |document| %>
+    <p><%= link_to document.title, document_path(document) %></p>
+  <% end %>
+
+<% elsif @path == "articles" %>
+<!--記事を表示-->
+  <% @articles.each do |article| %>
+    <p><%= link_to article.title, article_path(article) %></p>
+  <% end %>
+
+<% end %>
+
+<p><%= link_to '編集', edit_category_path(@category) %></p>

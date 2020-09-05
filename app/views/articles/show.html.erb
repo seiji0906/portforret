@@ -1,0 +1,6 @@
+<h1><%= @article.title %></h1>
+<div class="article-show">
+  <%= @article.body %>
+</div>
+<p><%= link_to '編集', edit_article_path(@article) %></p>
+<p><%= link_to '削除', @article, data: { confirm: '削除してよろしいですか？' }, method: :delete %></p>
